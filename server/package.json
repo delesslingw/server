@@ -1,0 +1,15 @@
+{
+    "name": "server",
+    "version": "0.0.1",
+    "description": "DeLesslin's portfolio server",
+    "main": "index.js",
+    "scripts": {
+        "start": "node .",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "DeLesslin",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^5.1.0"
+    }
+}
