@@ -4,11 +4,13 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "node ."
+        "start": "node .",
+        "dev": "nodemon ."
     },
     "author": "delesslin",
     "license": "ISC",
     "dependencies": {
-        "express": "^5.1.0"
+        "express": "^5.1.0",
+        "showdown": "^2.1.0"
     }
 }

@@ -1,10 +1,15 @@
 const express = require("express");
-
+const fs = require("fs").promises;
 const app = express();
-
-app.get("/", (req, res) => {
-    console.log("Received request.");
-    res.send("Tanake manu V2");
+const showdown = require("showdown");
+const converter = new showdown.Converter({
+    simplifiedAutoLink: true,
+    tasklists: true,
+});
+app.get("/", async (req, res) => {
+    const text = await fs.readFile("../README.md", "utf-8");
+    const html = converter.makeHtml(text);
+    res.send(html);
 });
 
 app.listen(3000, (err) => {
