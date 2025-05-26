@@ -1,15 +1,17 @@
-# Use a lightweight Node.js base image
 FROM node:18-alpine
 
-# Set working directory inside the container
+# Start in /app
 WORKDIR /app
 
-# Copy and install dependencies
+# Copy everything into /app (including README.md and server/)
+COPY . .
+
+# Set working directory to the server
+WORKDIR /app/server
+
+# Install dependencies inside the server directory
 COPY server/package*.json ./
 RUN npm install
-
-# Copy the rest of the app
-COPY server .
 
 # Expose the app port
 EXPOSE 3000
