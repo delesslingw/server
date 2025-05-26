@@ -3,6 +3,7 @@ const showdown = require("showdown");
 const converter = new showdown.Converter({
     simplifiedAutoLink: true,
     tasklists: true,
+    ghCodeBlocks: true,
 });
 const serveREADME = async (req, res) => {
     const text = await fs.readFile("../README.md", "utf-8");
