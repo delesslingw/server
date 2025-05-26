@@ -20,6 +20,21 @@ Backend for www.delesslin.studio
 -   [ ] Start storing portfolio data in mongodb
 -   [ ] Migrate bluesky bots
 
+## API
+
+### `/PROJECTS`
+
+-   `GET /`
+    -   Get all projects
+-   `GET /:id`
+    -   Get project with given id
+-   `POST /`
+    -   create new project
+-   `DELETE /:id`
+    -   Delete project with given id
+-   `PUT /:id`
+    -   Update project with given id
+
 ## Reference and Biblio
 
 [Showdown](https://github.com/showdownjs/showdown)
