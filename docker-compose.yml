@@ -6,3 +6,18 @@ services:
         ports:
             - "3000:3000"
         restart: always
+        depends_on:
+            - mongo
+        environment:
+            - MONGO_URI=mongodb://mongo:27017/mydb
+
+    mongo:
+        image: mongo:6
+        restart: always
+        volumes:
+            - mongo-data:/data/db
+        environment:
+            - MONGO_INITDB_DATABASE=mydb
+
+volumes:
+    mongo-data:
