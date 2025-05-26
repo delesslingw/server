@@ -4,7 +4,7 @@ const app = express();
 
 app.get("/", (req, res) => {
     console.log("Received request.");
-    res.send("Tanake manu");
+    res.send("Tanake manu V2");
 });
 
 app.listen(3000, (err) => {
@@ -12,5 +12,5 @@ app.listen(3000, (err) => {
         console.error(err);
         return;
     }
-    console.log(`Listening at http://localhost:${3000} V2`);
+    console.log(`Listening at http://localhost:${3000}`);
 });
