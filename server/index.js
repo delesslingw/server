@@ -12,5 +12,5 @@ app.listen(3000, (err) => {
         console.error(err);
         return;
     }
-    console.log(`Listening at http://localhost:${3000}`);
+    console.log(`Listening at http://localhost:${3000} V2`);
 });
