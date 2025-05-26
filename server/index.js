@@ -1,16 +1,14 @@
+require("dotenv").config();
 const express = require("express");
-const fs = require("fs").promises;
 const app = express();
-const showdown = require("showdown");
-const converter = new showdown.Converter({
-    simplifiedAutoLink: true,
-    tasklists: true,
-});
-app.get("/", async (req, res) => {
-    const text = await fs.readFile("../README.md", "utf-8");
-    const html = converter.makeHtml(text);
-    res.send(html);
-});
+const mongoose = require("mongoose");
+const serveREADME = require("./serveREADME");
+mongoose
+    .connect(process.env.MONGO_URI)
+    .then(() => console.log("Connected to MongoDB"))
+    .catch((e) => console.error(`MongoDB connection error`, e));
+
+app.get("/", serveREADME);
 
 app.listen(3000, (err) => {
     if (err) {

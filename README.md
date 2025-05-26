@@ -14,8 +14,9 @@ Backend for www.delesslin.studio
 -   [x] Get server running on linode
 -   [x] Get github actions working
 -   [x] Serve static html from README file
--   [ ] Implement nginx
--   [ ] Implement mongodb
+-   [x] Implement nginx
+-   [x] Implement mongodb in docker-compose
+-   [ ] create model and endpoint for creating and retrieving portfolio data
 -   [ ] Start storing portfolio data in mongodb
 -   [ ] Migrate bluesky bots
 
