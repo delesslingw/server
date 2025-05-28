@@ -16,6 +16,7 @@ Backend for www.delesslin.studio
 -   [x] Serve static html from README file
 -   [x] Implement nginx
 -   [x] Implement mongodb in docker-compose
+-   [ ] Implement security for reqs to server
 -   [ ] create model and endpoint for creating and retrieving portfolio data
 -   [ ] Start storing portfolio data in mongodb
 -   [ ] Migrate bluesky bots
